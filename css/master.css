@@ -1,3 +1,9 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .gray-bg {
   background: #f3f3f3;
 }
@@ -54,4 +60,11 @@
   position: relative;
   float: left;
   margin-right: 50px;
+}
+
+.contact-pic {
+  background-image: url(../images/appetite-1239428_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
 }
