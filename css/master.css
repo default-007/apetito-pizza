@@ -1,0 +1,48 @@
+.gray-bg {
+  background: #f3f3f3;
+}
+
+.topnav {
+  background-color: #f3f3f3;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: green;
+  color: orange;
+}
+
+.topnav a.active {
+  background-color: rgb(250, 24, 8);
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.home-pic {
+  background-image: url(../images/appetite-1239428_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f3f3f3;
+  font-weight: 500;
+}

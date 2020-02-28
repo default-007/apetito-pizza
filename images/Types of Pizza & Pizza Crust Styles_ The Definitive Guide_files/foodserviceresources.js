@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".fsr-view-more").click(function(){$('.fsr-nav li').removeClass('fsr-hide');$('.fsr-view-more').addClass('fsr-hide');});$("ul.fsr-nav .fsr-label").click(function(){$(this).toggleClass("fsr-mobile");$(this).siblings().slideToggle();});});
