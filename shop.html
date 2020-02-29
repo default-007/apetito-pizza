@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/master.css">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -47,99 +46,91 @@
           <div class="build-pizza">
             <div class="pd">
               <h5>Size</h5>
-              <div class="dropdown">
-                <button onclick="pizzaSize()" class="dropbtn">Size<span class="caret"></span></button>
-                <div id="sizeDropdown" class="dropdown-content">
-                  <ul>
-                    <li><a href="#">Large</a></li>
-                    <li><a href="#">Medium</a></li>
-                    <li><a href="#">Small</a></li>
-                  </ul>
-                </div>
-                <div class="smessage"></div>
-              </div>
-            </div>
-
-            <div class="pd">
-              <h5>Crust</h5>
-              <div class="dropdown">
-                <button onclick="pizzaCrust()" class="dropbtn" type="button">Crust<span class="caret"></span></button>
-                <div id="crustDropdown" class="dropdown-content">
-                  <ul>
-                    <li><a href="#">Crispy</a></li>
-                    <li><a href="#">Stuffed</a></li>
-                    <li><a href="#">Gluten-free</a></li>
-                </div>
-                <div class="cmessage"></div>
-              </div>
-            </div>
-            <div class="pd">
-              <h5>Toppings</h5>
-              <div class="dropdown">
-                <button onclick="pizzaTopping()" class="dropbtn">Toppings<span class="caret"></span></button>
-                <div id="toppingDropdown" class="dropdown-content">
-                  <ul>
-                    <li><a href="#">Crispy</a></li>
-                    <li><a href="#">Stuffed</a></li>
-                    <li><a href="#">Gluten-free</a></li>
-                  </ul>
-                </div>
-                <div class="tmessage"></div>
-              </div>
-            </div>
-            <div class="pd">
-              <h5>Total Number</h5>
               <div class="form-group">
-                <label for="Number">NO. of Pizza:</label>
-                <select class="form-control" id="pizzaNo">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                <label for="text">Pizza Size:</label>
+                <select class="form-control" id="pizzaSize">
+                  <option value="">--select--</option>
+                  <option value="500">Large</option>
+                  <option value="400">Medium</option>
+                  <option value="300">Small</option>
                 </select>
               </div>
+
+              <div class="pd">
+                <h5>Crust</h5>
+                <div class="form-group">
+                  <label for="text">Crust:</label>
+                  <select class="form-control" id="pizzaCrust">
+                    <option value="">--select--</option>
+                    <option value="300">Crispy</option>
+                    <option value="200">Stuffed</option>
+                    <option value="250">Gluten free</option>
+                  </select>
+                </div>
+                <div class="pd">
+                  <h5>Toppings</h5>
+                  <div class="form-group">
+                    <label for="Number">Toppings:</label>
+                    <select class="form-control" id="pizzaTopping">
+                      <option value="">--select--</option>
+                      <option value="250">Chicken</option>
+                      <option value="200">Vegetable</option>
+                      <option value="300">Beef</option>
+                    </select>
+                  </div>
+                  <div class="pd">
+                    <h5>Total Number</h5>
+                    <div class="form-group">
+                      <label for="Number">NO. of Pizza:</label>
+                      <select class="form-control" id="pizzaNo">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="sub">
+                  <button class="btn btn-primary" onclick="getSelected()">ADD TO CART</button>
+                  <button type="button" class="btn btn-danger">CANCEL</button>
+                </div>
+              </div>
+              <br>
+              <div>
+                <h2>Cart</h2>
+                <table class="table table-dark table-hover">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Delete</th>
+                      <th>Size</th>
+                      <th>Crust</th>
+                      <th>Topping</th>
+                      <th>No. of Pizza</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <ion-icon name="trash"></ion-icon>
+                      </td>
+                      <td>Large</td>
+                      <td>Stuffed</td>
+                      <td>Chicken</td>
+                      <td>1</td>
+                      <td>1000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-          <div class="sub">
-            <button type="button" class="btn btn-primary">ADD TO CART</button>
-            <button type="button" class="btn btn-danger">CANCEL</button>
-          </div>
         </div>
-        <br>
-        <div>
-          <h2>Cart</h2>
-          <table class="table table-dark table-hover">
-            <thead class="thead-light">
-              <tr>
-                <th>Delete</th>
-                <th>Size</th>
-                <th>Crust</th>
-                <th>Topping</th>
-                <th>No. of Pizza</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <ion-icon name="trash"></ion-icon>
-                </td>
-                <td>Large</td>
-                <td>Stuffed</td>
-                <td>Chicken</td>
-                <td>1</td>
-                <td>1000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/scripts.js"></script>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>

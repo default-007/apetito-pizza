@@ -14,6 +14,12 @@ window.onclick = function (event) {
     }
   }
 }
+
+function getSelected() {
+  var e = document.getElementById("sizeDropdown");
+  var result = e.options[e.selectedIndex].text;
+  document.getElementsByClassName("smessage").innerHTML = result;
+}
 //CRUST DROPDOWN
 function pizzaCrust() {
   document.getElementById("crustDropdown").classList.toggle("show");
@@ -48,3 +54,6 @@ window.onclick = function (event) {
     }
   }
 }
+
+//
+var size = document.getElementById("sizeDropdown")
