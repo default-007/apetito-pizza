@@ -14,7 +14,7 @@ window.onclick = function (event) {
     }
   }
 }
-
+//CRUST DROPDOWN
 function pizzaCrust() {
   document.getElementById("crustDropdown").classList.toggle("show");
 }
