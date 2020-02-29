@@ -31,7 +31,7 @@ window.onclick = function (event) {
     }
   }
 }
-
+//TOPPING DROPDOWN
 function pizzaTopping() {
   document.getElementById("toppingDropdown").classList.toggle("show");
 }
