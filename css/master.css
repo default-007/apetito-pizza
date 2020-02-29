@@ -65,13 +65,29 @@ ion-icon {
   padding: 0;
 }
 
+.specials {
+  background-color: darkgray;
+  margin: 20px;
+}
+
 .home-pic {
   background-image: url(../images/pizza-952172_960_720.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
-  margin-top: 70px;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: darkgrey;
+  height: 700px;
   width: 100%;
+}
+
+.row {
+  justify-content: center;
+  text-align: center;
+}
+
+.price {
+  float: right;
 }
 
 .ptext {
