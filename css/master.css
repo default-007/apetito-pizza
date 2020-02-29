@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #f3f3f3;
+  text-align: center;
 }
 
 .gray-bg {
@@ -36,7 +37,6 @@ header {
 }
 
 .topnav a {
-  float: left;
   display: inline-block;
   color: #ffffff;
   text-align: center;
@@ -75,8 +75,7 @@ ion-icon {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  background-color: darkgrey;
+  background-color: tomato;
   height: 700px;
   width: 100%;
 }
@@ -88,6 +87,13 @@ ion-icon {
 
 .price {
   float: right;
+  color: yellow;
+  background-color: tomato;
+}
+
+h3 {
+  background-color: tomato;
+  padding: 5px;
 }
 
 .ptext {
