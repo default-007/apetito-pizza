@@ -1,12 +1,62 @@
 html,
 body {
-  max-width: 100%;
+  max-width: auto;
   overflow-x: hidden;
   background-image: url(../images/pizza.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #f3f3f3;
   text-align: center;
+}
+
+.spec {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  width: 400px;
+  text-align: center;
+  font-family: arial;
+  background-color: darkgray;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.price {
+  color: yellow;
+  background-color: tomato;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .card,
+  .spec {
+    display: block;
+    width: 100%;
+  }
 }
 
 .gray-bg {
@@ -65,11 +115,6 @@ ion-icon {
   padding: 0;
 }
 
-.specials {
-  background-color: darkgray;
-  margin: 20px;
-}
-
 .home-pic {
   background-image: url(../images/pizza-952172_960_720.png);
   background-repeat: no-repeat;
@@ -80,35 +125,19 @@ ion-icon {
   width: 100%;
 }
 
-.row {
-  justify-content: center;
-  text-align: center;
-}
-
-.price {
-  float: right;
-  color: yellow;
-  background-color: tomato;
-}
-
 h3 {
   background-color: tomato;
   padding: 5px;
 }
 
-.ptext {
-  top: 15%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-weight: 500;
+.specials-img {
+  position: relative;
   text-align: center;
-
 }
 
 .ptype {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   float: left;
   margin-right: 50px;
 }
@@ -126,4 +155,53 @@ form {
 .container {
   background-color: darkgray;
 
+}
+
+/*SHOP HTML*/
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.build-pizza {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd
+}
+
+.show {
+  display: block;
 }
