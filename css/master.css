@@ -20,7 +20,8 @@ body {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 20px;
-  width: 400px;
+  min-width: 350px;
+  max-width: 350px;
   text-align: center;
   font-family: arial;
   background-color: darkgray;
@@ -187,10 +188,6 @@ form {
   z-index: 1;
 }
 
-.build-pizza {
-  display: block;
-}
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -204,4 +201,15 @@ form {
 
 .show {
   display: block;
+}
+
+.build-pizza {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.pd {
+  margin: 100px;
 }

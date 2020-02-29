@@ -36,7 +36,7 @@
 
   <!--body-->
   <div class="shop-pic">
-    <div class="containe">
+    <div class="container">
       <div class="content-header">
         <h2>MENU</h2>
       </div>
@@ -45,40 +45,89 @@
           <h2>Build your own Pizza</h2>
 
           <div class="build-pizza">
-            <h5>Size</h5>
-            <div class="dropdown">
-              <button onclick="pizzaSize()" class="dropbtn">Size</button>
-              <div id="sizeDropdown" class="dropdown-content">
-                <a href="#">Large</a>
-                <a href="#">Medium</a>
-                <a href="#">Small</a>
+            <div class="pd">
+              <h5>Size</h5>
+              <div class="dropdown">
+                <button onclick="pizzaSize()" class="dropbtn">Size<span class="caret"></span></button>
+                <div id="sizeDropdown" class="dropdown-content">
+                  <a href="#">Large</a>
+                  <a href="#">Medium</a>
+                  <a href="#">Small</a>
+                </div>
+                <div class="smessage"></div>
+              </div>
+            </div>
+
+            <div class="pd">
+              <h5>Crust</h5>
+              <div class="dropdown">
+                <button onclick="pizzaCrust()" class="dropbtn" type="button">Crust<span class="caret"></span></button>
+                <div id="crustDropdown" class="dropdown-content">
+                  <a href="#">Crispy</a>
+                  <a href="#">Stuffed</a>
+                  <a href="#">Gluten-free</a>
+                </div>
+                <div class="cmessage"></div>
+              </div>
+            </div>
+            <div class="pd">
+              <h5>Toppings</h5>
+              <div class="dropdown">
+                <button onclick="pizzaTopping()" class="dropbtn">Toppings<span class="caret"></span></button>
+                <div id="toppingDropdown" class="dropdown-content">
+                  <a href="#">Crispy</a>
+                  <a href="#">Stuffed</a>
+                  <a href="#">Gluten-free</a>
+                </div>
+                <div class="tmessage"></div>
+              </div>
+            </div>
+            <div class="pd">
+              <h5>Total Number</h5>
+              <div class="form-group">
+                <label for="Number">NO. of Pizza:</label>
+                <select class="form-control" id="pizzaNo">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
               </div>
             </div>
           </div>
-          <div>
-            <h5>Crust</h5>
-            <div class="dropdown">
-              <button onclick="pizzaCrust()" class="dropbtn">Crust</button>
-              <div id="crustDropdown" class="dropdown-content">
-                <a href="#">Crispy</a>
-                <a href="#">Stuffed</a>
-                <a href="#">Gluten-free</a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h5>Toppings</h5>
-            <div class="dropdown">
-              <button onclick="pizzaTopping()" class="dropbtn">Toppings</button>
-              <div id="toppingDropdown" class="dropdown-content">
-                <a href="#">Crispy</a>
-                <a href="#">Stuffed</a>
-                <a href="#">Gluten-free</a>
-              </div>
-            </div>
+          <div class="sub">
+            <button type="button" class="btn btn-primary">ADD TO CART</button>
+            <button type="button" class="btn btn-danger">CANCEL</button>
           </div>
         </div>
-
+        <br>
+        <div>
+          <h2>Cart</h2>
+          <table class="table table-dark table-hover">
+            <thead class="thead-light">
+              <tr>
+                <th>Delete</th>
+                <th>Size</th>
+                <th>Crust</th>
+                <th>Topping</th>
+                <th>No. of Pizza</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ion-icon name="trash"></ion-icon>
+                </td>
+                <td>Large</td>
+                <td>Stuffed</td>
+                <td>Chicken</td>
+                <td>1</td>
+                <td>1000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
