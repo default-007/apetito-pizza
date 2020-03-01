@@ -1,24 +1,27 @@
 //VALUE
+var size = document.getElementById("pizzaSize");
+size.addEventListener("change", generateData);
 
-function GetSizeValue() {
-  var e = document.getElementById("pizzaSize");
-  var result = e.options[e.selectedIndex].value;
-
-  document.getElementById("sprice").innerHTML = result;
+function generateData(event) {
+  if (size.value == '500') {
+    document.getElementById("sprice").innerHTML = "KSH 500";
+  } else if (size.value == '400') {
+    document.getElementById("sprice").innerHTML = "KSH 400";
+  } else if (size.value == '300') {
+    document.getElementById("sprice").innerHTML = "KSH 300";
+  }
 }
+var crust = document.getElementById("pizzaCrust");
+crust.addEventListener("change", generateData);
 
-function GetCrustValue() {
-  var e = document.getElementById("pizzaCrust");
-  var result = e.options[e.selectedIndex].value;
-
-  document.getElementById("cprice").innerHTML = result;
-}
-
-function GetToppingValue() {
-  var e = document.getElementById("pizzaTopping");
-  var result = e.options[e.selectedIndex].value;
-
-  document.getElementById("tprice").innerHTML = result;
+function generateData(event) {
+  if (crust.value == '1') {
+    document.getElementById("cprice").innerHTML = "KSH 300";
+  } else if (crust.value == '2') {
+    document.getElementById("cprice").innerHTML = "KSH 200";
+  } else if (crust.value == '3') {
+    document.getElementById("cprice").innerHTML = "KSH 250";
+  }
 }
 
 
