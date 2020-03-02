@@ -6,13 +6,10 @@ size.addEventListener("change", getSize);
 function getSize(event) {
   if (size.value == '500') {
     document.getElementById("sprice").innerHTML = "500";
-    document.getElementById("stext").innerHTML = "Large";
   } else if (size.value == '400') {
     document.getElementById("sprice").innerHTML = "400";
-    document.getElementById("stext").innerHTML = "Medium";
   } else if (size.value == '300') {
     document.getElementById("sprice").innerHTML = "300";
-    document.getElementById("stext").innerHTML = "Small";
   }
 }
 //crust
@@ -22,13 +19,10 @@ crust.addEventListener("change", getCrust);
 function getCrust(event) {
   if (crust.value == '1') {
     document.getElementById("cprice").innerHTML = "300";
-    document.getElementById("ctext").innerHTML = "Crispy";
   } else if (crust.value == '2') {
     document.getElementById("cprice").innerHTML = "200";
-    document.getElementById("ctext").innerHTML = "Stuffed";
   } else if (crust.value == '3') {
     document.getElementById("cprice").innerHTML = "250";
-    document.getElementById("ctext").innerHTML = "Gluten free";
   }
 }
 //topping
@@ -38,13 +32,10 @@ topping.addEventListener("change", getTopping);
 function getTopping(event) {
   if (topping.value == '250') {
     document.getElementById("tprice").innerHTML = "250";
-    document.getElementById("ttext").innerHTML = "Chicken";
   } else if (topping.value == '200') {
     document.getElementById("tprice").innerHTML = "200";
-    document.getElementById("ttext").innerHTML = "Vegetable";
   } else if (topping.value == '300') {
     document.getElementById("tprice").innerHTML = "300";
-    document.getElementById("ttext").innerHTML = "Beef";
   }
 }
 //no
@@ -111,3 +102,43 @@ order.prototype.cost = function () {
 
   return this.price;
 }
+
+order.prototype.totalCost = function () {
+  var orderTotal = 0;
+  for (var order = 0; order < totalCosts.length; order++) {
+    orderTotal += totalCosts[order];
+  }
+  return orderTotal;
+}
+
+
+$(document).ready(function () {
+  $("#addCart").click(function (event) {
+    event.preventDefault();
+    var sizes = $("select#pizzaSize").val();
+    var crusts = $("select#pizzaCrust").val();
+    var toppings = $("select#pizzazTopping").val();
+    var pizzaNo = $("select#pizzaNo").val();
+
+    var newPizzaOrder = new order(sizes, crusts, toppings);
+    newPizzaOrder.cost();
+    totalCosts.push(newPizzaOrder.price);
+
+
+    $("#stext").text(sizes);
+    $("#ctext").text(crusts);
+    $("#ttext").text(toppings);
+    $("#total-text").text(newPizzaOrder.totalCost());
+
+
+  });
+
+  $("#order2").click(function () {
+    prompt("Please insert you name")
+    prompt("Please insert you location")
+    prompt("Please insert your addrress")
+    alert("You will be charged an extra 200 for delivery")
+    alert("Thank you for Your Purchase!Your order will be delivered to your location 🍕 🚚")
+
+  });
+});
