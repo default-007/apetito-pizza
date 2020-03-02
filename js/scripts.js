@@ -142,15 +142,17 @@ $(document).ready(function () {
       if (checkRadio != null) {
         document.getElementById("disp").innerHTML = "Please pay Apetito pizza" +
           document.getElementById("total-text") + "200 for delivery"
-        prompt("Please insert you name")
-        prompt("Please insert you location")
-        alert("You will be charged an extra 200 for delivery")
-        alert("Thank you for Your Purchase! Your order will be delivered to your location")
+        document.getElementById("gtotal").innerHTML = parseInt(document.getElementById("total-text")) + parseInt("200")
+        prompt("Please insert you name");
+        prompt("Please insert you location");
+        alert("You will be charged an extra 200 for delivery");
+        alert("Thank you for Your Purchase! Your order will be delivered to your location");
       } else {
         document.getElementById("disp").innerHTML = "Please pay Apetito pizza" +
           document.getElementById("total-text");
-        prompt("Please enter your name")
-        alert("Thank you for your purchse! Your order will be ready for pickup in 10 mins")
+        document.getElementById("gtotal").innerHTML = document.getElementById("total-text");
+        prompt("Please enter your name");
+        alert("Thank you for your purchse! Your order will be ready for pickup in 10 mins");
       }
     }
   });
