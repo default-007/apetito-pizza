@@ -64,10 +64,50 @@ function getNumber(event) {
 }
 
 // TOTAL
-var total = document.getElementById("total-text");
-total.addEventListener("change", getTotal);
+var totalCosts = [];
 
-function getTotal(event) {
-  total = parseInt(document.getElementById("sprice")) + parseInt(document.getElementById("cprice")) + parseInt(document.getElementById("tprice")) * parseInt(document.getElementById("ntext"));
-  document.getElementById("total-text").innerHTML = total;
+function order(size, crust, topping, ) {
+  this.size = size;
+  this.crust = crust;
+  this.topping = topping;
+  this.price = 0;
+
+}
+var pizzaSize = ["Large", "Medium", "Small"];
+var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
+var pizzaTopping = ["Chicken", "Vegetable", "Beef", ];
+
+order.prototype.cost = function () {
+  if (this.size === pizzaSize[0]) {
+    this.price += 0;
+  } else if (this.size === pizzaSize[1]) {
+    this.price += 500;
+  } else if (this.size === pizzaSize[2]) {
+    this.price += 400;
+  } else if (this.size === pizzaSize[3]) {
+    this.price += 300;
+  }
+
+  if (this.crust === pizzaCrust[0]) {
+    this.price += 0;
+  } else if (this.crust === pizzaCrust[1]) {
+    this.price += 300;
+  } else if (this.crust === pizzaCrust[2]) {
+    this.price += 200;
+  } else if (this.crust === pizzaCrust[3]) {
+    this.price += 250;
+  }
+
+
+  if (this.topping === pizzaTopping[0]) {
+    this.price += 0;
+  } else if (this.topping === pizzaTopping[1]) {
+    this.price += 250;
+  } else if (this.topping === pizzaTopping[2]) {
+    this.price += 200;
+  } else if (this.topping === pizzaTopping[3]) {
+    this.price += 300;
+  }
+
+  return this.price;
 }
