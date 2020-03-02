@@ -32,14 +32,14 @@
   <div class="shop-pic">
     <div class="container">
       <div class="content-header">
-        <h2>MENU</h2>
+        <h2 class="title">MENU</h2>
       </div>
       <div class="content-body">
         <div>
-          <h2>Build your own Pizza</h2>
+          <h2 class="title">Build your own Pizza</h2>
           <div class="build-pizza">
             <div class="pd">
-              <h5>Size</h5>
+              <h5 class="title">Size</h5>
               <div class="form-group">
                 <label for="text">Pizza Size:</label>
                 <select class="form-control" id="pizzaSize" required>
@@ -48,7 +48,7 @@
                   <option value="Medium">Medium</option>
                   <option value="Small">Small</option>
                 </select>
-                <div>KSH
+                <div class="pprice">KSH
                   <div id="sprice">
                     o
                   </div>
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="pd">
-              <h5>Crust</h5>
+              <h5 class="title">Crust</h5>
               <div class="form-group">
                 <label for="text">Crust:</label>
                 <select class="form-control" id="pizzaCrust" required>
@@ -65,7 +65,7 @@
                   <option value="Stuffed">Stuffed</option>
                   <option value="Gluten free">Gluten free</option>
                 </select>
-                <div>KSH
+                <div class="pprice">KSH
                   <div id="cprice">
                     ---
                   </div>
@@ -73,7 +73,7 @@
               </div>
             </div>
             <div class="pd">
-              <h5>Toppings</h5>
+              <h5 class="title">Toppings</h5>
               <div class="form-group">
                 <label for="Number">Toppings:</label>
                 <select class="form-control" id="pizzaTopping" required>
@@ -82,7 +82,7 @@
                   <option value="Vegetable">Vegetable</option>
                   <option value="Beef">Beef</option>
                 </select>
-                <div>KSH
+                <div class="pprice">KSH
                   <div id="tprice">
                     ---
                   </div>
@@ -90,7 +90,7 @@
               </div>
             </div>
             <div class="pd">
-              <h5>Total Number</h5>
+              <h5 class="title">Total Number</h5>
               <div class="form-group">
                 <label for="Number">NO. of Pizza:</label>
                 <select class="form-control" id="pizzaNo">
@@ -109,7 +109,7 @@
         </div>
         <br>
         <div>
-          <h2>Cart</h2>
+          <h2 class="title">Cart</h2>
           <table class="table table-dark table-hover">
             <thead class="thead-light">
               <tr>
@@ -135,6 +135,20 @@
             </tbody>
           </table>
         </div>
+        <div>
+          <h5 class="title">Delivery</h5>
+          <p class="pprice">Only within CBD</p>
+          <p>Delivery cost additional cost of <span class="pprice">KSH 200</span>
+          </p>
+          <form>
+            <input type="radio" name="delivery" id="delivery" value="Delivery">DELIVERY
+          </form>
+        </div>
+        <div class="sub">
+          <button class="btn btn-primary" id="checkout">CHECKOUT</button>
+          <button type="button" class="btn btn-danger" id="Cancel">CANCEL</button>
+        </div>
+        <br>
       </div>
     </div>
   </div>

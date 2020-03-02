@@ -175,3 +175,11 @@ select {
   max-width: 150px;
   min-width: 150px;
 }
+
+.pprice {
+  background-color: tomato;
+}
+
+.title {
+  color: #000;
+}
