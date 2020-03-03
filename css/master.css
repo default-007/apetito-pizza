@@ -22,6 +22,11 @@ body {
   margin-right: 200px;
 }
 
+.card-deck {
+  justify-content: center;
+  text-align: center;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 20px;
