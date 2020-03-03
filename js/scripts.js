@@ -128,32 +128,16 @@ $(document).ready(function () {
     $("#stext").text(sizes);
     $("#ctext").text(crusts);
     $("#ttext").text(toppings);
-    $("#ntext").text(pizzaNo)
+    $("#ntext").text(pizzaNo);
     $("#total-text").text(newPizzaOrder.totalCost());
 
 
   });
 
   $("#checkout").click(function () {
-    function display() {
-      var checkRadio = document.querySelector(
-        'input[name="delivery"]:checked');
-
-      if (checkRadio != null) {
-        document.getElementById("disp").innerHTML = "Please pay Apetito pizza" +
-          document.getElementById("total-text") + "200 for delivery"
-        document.getElementById("gtotal").innerHTML = parseInt(document.getElementById("total-text")) + parseInt("200")
-        prompt("Please insert you name");
-        prompt("Please insert you location");
-        alert("You will be charged an extra 200 for delivery");
-        alert("Thank you for Your Purchase! Your order will be delivered to your location");
-      } else {
-        document.getElementById("disp").innerHTML = "Please pay Apetito pizza" +
-          document.getElementById("total-text");
-        document.getElementById("gtotal").innerHTML = document.getElementById("total-text");
-        prompt("Please enter your name");
-        alert("Thank you for your purchse! Your order will be ready for pickup in 10 mins");
-      }
-    }
+    prompt("Please insert you name")
+    prompt("Please insert you location")
+    alert("You will be charged an extra 200 for delivery")
+    alert("Thank you for Your Purchase!Your order will be delivered to your location 🍕 🚚")
   });
 });
